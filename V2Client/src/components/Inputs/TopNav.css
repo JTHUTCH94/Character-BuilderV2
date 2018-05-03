@@ -1,0 +1,78 @@
+.nav-bar{
+    position: relative;
+    display: block;
+    top: 0;
+    width: 50%;
+    list-style-type: none;
+    margin-bottom: 50px;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #c49e52d2;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");  border-radius: 100px;
+    border: 1px solid black;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  .show-list{
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #967b45d2;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");  
+    border-radius: 100px;
+  }
+
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .nav-bar{
+      display: block;
+      width: 99%;
+      margin: auto;
+    }
+
+    li{
+      width: 40%;
+    }
+}
+
+  @media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .nav-bar{
+      display: block;
+      width: 100%;
+      margin: auto;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .nav-bar{
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
