@@ -35,9 +35,9 @@ export const setName = (name) => ({
     name
 });
 
-export const setNameAction = (e) => {
+/*export const setNameAction = (e) => {
     this.props.dispatch(setName(e.target.value));
-}
+}*/
 
 export const SET_RACE = 'SET_RACE';
 export const setRace = (race) => ({
@@ -45,9 +45,9 @@ export const setRace = (race) => ({
     race
 });
 
-export const setRaceAction = (e) => {
+/*export const setRaceAction = (e) => {
     this.props.dispatch(setRace(e.target.value));
-};
+};*/
 
 export const SET_CLASSIFICATION = 'SET_CLASSIFICATION';
 export const setClassification = (classification) => ({
@@ -55,9 +55,9 @@ export const setClassification = (classification) => ({
     classification
 });
 
-export const setClassificationAction = (e) => {
+/*export const setClassificationAction = (e) => {
     this.props.dispatch(setClassification(e.target.value));
-};
+};*/
 
 export const SET_WEAPON = 'SET_WEAPON';
 export const setWeapon = (weapon) => ({
@@ -65,41 +65,15 @@ export const setWeapon = (weapon) => ({
     weapon
 });
 
-export const setWeaponAction = (e) => {
+/*export const setWeaponAction = (e) => {
     this.props.dispatch(setWeapon(e.target.value));
-}
-
-/*export const SET_BACKGROUND = 'SET_BACKGROUND';
-export const setBackground = (background) => ({
-    type: SET_BACKGROUND,
-    background
-});
-
-export const setBackgroundAction = (e) => {
-    this.props.dispatch(setBackground(e.target.value));
-}
-
-export const SET_APPEARANCE = 'SET_APPEARANCE';
-export const setAppearance = (appearance) => ({
-    type: SET_APPEARANCE,
-    appearance
-});
-
-export const setAppearanceAction = (e) => {
-    this.props.dispatch(setAppearance(e.target.value));
-}*/
-
-export const SET_DISPLAY = 'SET_DISPLAY';
-export const setDisplay = () => ({
-    type: SET_DISPLAY
-});
+};*/
 
 export const GET_CHARACTERS = 'GET_CHARACTERS';
 export const getCharacters = (characters) => ({
     type: GET_CHARACTERS,
     characters
 });
-
 
 export const getCharactersAction = (characters) => dispatch => {
     return fetch('http://localhost:8080/api/characters', {

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import './CharacterList.css';
 
 function CharacterList(props) {
+    console.log(props.characters);
     const characters = props.characters.map((character, index) => (
 
         <li key={index} className="characters">

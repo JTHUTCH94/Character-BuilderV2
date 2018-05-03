@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function Name(props) {
+export function Name(props) {
     return (
         <div>
             <label htmlFor="text-input" className="name-plate">
             Name
             <br />
-            <input type="text" className="name" name="name" value={props.name} onChange={e => props.onInput(e)} />
+            <input type="text" className="name" name="name" value={props.name} onInput={e => props.onInput(e)} />
             </label>
         </div>
     )

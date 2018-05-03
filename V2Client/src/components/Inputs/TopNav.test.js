@@ -1,10 +1,26 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
+import { TopNav } from './TopNav';
+import { createForm, getCharactersAction } from '../../actions';
 
-import TopNav from './TopNav';
+describe('TopNav', () => {
+    it('Should render without crashing', () => {
+        mount(<TopNav/>);
+    });
 
-describe('<TopNav/>', () => {
-    it('Renders without crashing', () => {
-        shallow(<TopNav/>).dive();
+    it('Dispatches the createForm action', () => {
+        const dispatch = jest.fn();
+        const wrapper = mount(<TopNav dispatch={dispatch}/>);
+        const link = wrapper.find('.create-link');
+        link.simulate('click');
+        expect(dispatch).toHaveBeenCalledWith(createForm());
+    });
+
+    it('Dispatches the getCharactersAction', () => {
+        const dispatch = jest.fn();
+        const wrapper = mount(<TopNav dispatch={dispatch}/>);
+        const link = wrapper.find('.show-link');
+        link.simulate('click');
+        expect(dispatch).toHaveBeenCalledWith(getCharactersAction());
     });
 });

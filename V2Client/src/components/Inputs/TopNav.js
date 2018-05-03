@@ -6,8 +6,8 @@ import { createForm, getCharactersAction } from'../../actions';
 export function TopNav(props) {
     return (
         <ul className="nav-bar" role="navigation">
-            <li><a href="#create" onClick={e => props.dispatch(createForm(e))}>Create new Character</a></li>
-            <li className="show-list"><a href="#show" onClick={e => props.dispatch(getCharactersAction(e))}>Show Characters</a></li>
+            <li><a href="#create" className="create-link" onClick={e => props.dispatch(createForm(e))}>Create new Character</a></li>
+            <li className="show-list"><a href="#show" className="show-link" onClick={e => props.dispatch(getCharactersAction(e))}>Show Characters</a></li>
         </ul>
     )
 }

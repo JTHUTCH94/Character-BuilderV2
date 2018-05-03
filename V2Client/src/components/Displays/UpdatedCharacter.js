@@ -2,8 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './UpdatedCharacter.css';
 
-function UpdatedCharacterCard(props) {
-    console.log(props);
+export function UpdatedCharacter(props) {
     return (
         <div className="character-card">
             <div className="character-name">
@@ -34,11 +33,5 @@ function UpdatedCharacterCard(props) {
     )
 }
 
-const mapStateToProps = (state) => ({
-    name: state.name,
-    race: state.race,
-    classification: state.classification,
-    weapon: state.weapon
-});
 
-export default connect(mapStateToProps)(UpdatedCharacterCard);
+export default connect()(UpdatedCharacter);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function Class(props){
+export function Class(props){
   return (
     <div className="class" name="character-class-input">
     <fieldset className="builder-choices" name="character-class-choices">

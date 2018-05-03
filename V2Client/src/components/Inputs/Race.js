@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function Race(props) {
+export function Race(props) {
 
 return(
 <div className="race" name="character-race-input">

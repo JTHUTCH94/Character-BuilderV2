@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './CharacterCard.css';
 
-function CharacterCard(props) {
+export function CharacterCard(props) {
     console.log(props);
     return (
         <div className="character-card">

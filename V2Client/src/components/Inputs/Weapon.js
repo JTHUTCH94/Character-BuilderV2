@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function Weapon(props) {
+export function Weapon(props) {
   return (
     <div className="weapon" name="weapon-input">
       <fieldset className="builder-choices" name="weapon-choices">

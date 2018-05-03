@@ -13,10 +13,10 @@ import Name from './components/Inputs/Name';
 import TopNav from './components/Inputs/TopNav';
 import './Builder.css';
 
-import { createCharacterAction, getCharactersAction, setName, setRace, setClassification, setWeapon, setDisplay, enterScreen } from './actions';
+import { createCharacterAction, setName, setRace, setClassification, setWeapon, enterScreen } from './actions';
 
 
-class Builder extends React.Component {
+export class Builder extends React.Component {
 
     render() {
         if (this.props.display === 'enter-screen') {
@@ -30,7 +30,7 @@ class Builder extends React.Component {
                 <div className="create-form">
                 <TopNav />
                     <div className="character-form">
-                        <form className="builder" onSubmit={(e) => { e.preventDefault(); this.props.dispatch(setDisplay()); this.props.dispatch(createCharacterAction(e)) }}>
+                        <form className="builder" onSubmit={(e) => { e.preventDefault();this.props.dispatch(createCharacterAction(e)) }}>
                             <h1 className="title">Build your character</h1>
                             <Name onInput={e => this.props.dispatch(setName(e.target.value))} />
                             <Race onChange={e => this.props.dispatch(setRace(e.target.value))} />
